@@ -3,8 +3,9 @@ import './Genre.css';
 
 class Genre extends Component {
   render() {
+    const params = this.props.match.params;
     return (
-        <div>Genre content</div>
+        <div>{params.id}</div>
     );
   }
 }
