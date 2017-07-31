@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import './Genre.css';
 
 class Genre extends Component {
@@ -24,7 +25,7 @@ class Genre extends Component {
     return (
         <ul>
             {this.state.movies.map(movie =>
-              <li key={movie.id}>{movie.title}</li>
+              <li key={movie.id}><Link to={"/movie/" + movie.id}>{movie.title}</Link></li>
             )}
         </ul>
     );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Genre from '../Genre/Genre';
+import Movie from '../Movie/Movie';
 import './PrimaryLayout.css';
 import axios from 'axios';
 
@@ -30,6 +31,7 @@ class PrimaryLayout extends Component {
                 <hr/>
 
                 <Route path="/genre/:id" component={Genre}/>
+                <Route path="/movie/:id" component={Movie}/>
             </div>
         </BrowserRouter>
     );
